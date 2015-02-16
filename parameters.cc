@@ -84,7 +84,7 @@ std::ostream& operator<<(std::ostream& os, const Parameters& pars)
 	os << "--clusters-file = " << pars.clusters_file << '\n';
 	os << "--fasta-file = " << pars.fasta_file << '\n';
 	os << "--output-file = " << pars.output_file << '\n';
-	os << "--min_num_connections = " << pars.min_num_connections << '\n';
+	os << "--min-num-connections = " << pars.min_num_connections << '\n';
 
 	return os;
 }
