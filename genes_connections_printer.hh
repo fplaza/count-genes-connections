@@ -12,7 +12,7 @@ class GenesConnectionsPrinter
 {
 	public:
 		GenesConnectionsPrinter(const boost::unordered_map<std::pair<uint32_t, uint32_t>,uint32_t>& genes_connections, const std::string& output_file, size_t min_num_connections);
-		void print();
+		size_t print();
 
 		const boost::unordered_map<std::pair<uint32_t, uint32_t>,uint32_t>& genes_connections_;
 		const std::string output_file_;
