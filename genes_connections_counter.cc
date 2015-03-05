@@ -43,7 +43,14 @@ boost::unordered_map<std::pair<uint32_t, uint32_t>,uint32_t> GenesConnectionsCou
 
 		if (cur_contig_name == prev_contig_name)
 		{
-			genes_connections[std::make_pair(prev_gene_cluster, cur_gene_cluster)] += 1;
+			if (prev_gene_cluster < cur_gene_cluster)
+			{
+				genes_connections[std::make_pair(prev_gene_cluster, cur_gene_cluster)] += 1;
+			}
+			else
+			{
+				genes_connections[std::make_pair(cur_gene_cluster, prev_gene_cluster)] += 1;
+			}
 		}
 		else
 		{
